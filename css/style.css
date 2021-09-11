@@ -1,161 +1,174 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes MoveUpButton {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
-    line-height: 1.6;
-    font-weight: 400;
-    padding: 30px;
-    /* font-family: Lato; */
+  box-sizing: border-box;
 }
 
-.header {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(40, 180, 133, 0.8),
-        rgb(126, 213, 111,.8)), 
-    url('../img/hero.jpg');
-    height: 95vh;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-
-.header__logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}
-
-.header__logo-img {
-    height: 42px;
+body {
+  line-height: 1.6;
+  font-weight: 400;
+  padding: 30px;
+  font-family: "Lato", sans-serif;
 }
 
 .heading-text {
-    color: #fff;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
 }
 .heading-text--main {
-    font-size: 6.2rem;
-    display: block;
-    letter-spacing: 1.6rem;
-    font-weight: 400;
-
-    animation: MoveInLeft .4s ease-in;
+  font-size: 6.2rem;
+  display: block;
+  letter-spacing: 1.6rem;
+  font-weight: 400;
+  animation: MoveInLeft 0.4s ease-in;
 }
 .heading-text--sub {
-    font-size: 2.2rem;
-    letter-spacing: 1rem;
-    display: block;
-    font-weight: 400;
-    margin-bottom: 32px;
-
-    animation: MoveInRight .4s ease-in;
+  font-size: 2.2rem;
+  letter-spacing: 1rem;
+  display: block;
+  font-weight: 400;
+  margin-bottom: 32px;
+  animation: MoveInRight 0.4s ease-in;
 }
 
-@keyframes MoveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.btn:link, .btn:visited {
+  display: inline-block;
+  padding: 16px 42px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.1s;
 }
-
-@keyframes MoveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-@keyframes MoveUpButton {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    padding: 16px 42px;
-    border-radius: 100px;
-    text-decoration: none;
-    position: relative;
-    transition: all .1s;
-}
-
 .btn:hover {
-    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.137);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.137);
 }
-
 .btn:active {
-    box-shadow: 12px 22px 10px rgba(0, 0, 0, 0.137);
+  box-shadow: 12px 22px 10px rgba(0, 0, 0, 0.137);
 }
-
 .btn::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;        
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
 }
-
 .btn:hover::after {
-    transform: scale(1.5);
-    opacity: 0;
-   
+  transform: scale(1.5);
+  opacity: 0;
 }
-
 .btn--white {
-    background-color: #fff;
-    font-size: 18px;
-    color: #777;
+  background-color: #fff;
+  font-size: 18px;
+  color: #777;
+}
+.btn--animated {
+  animation: MoveUpButton 0.4s ease-in;
 }
 
-.btn--animated {
-    animation: MoveUpButton .4s ease-in;
+.header {
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url("../img/hero.jpg");
+  height: 95vh;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.header__logo-img {
+  height: 42px;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  background-color: red;
+  float: left;
+  padding: 20px;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) /3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) /4);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) /3) + 6rem);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) /4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) /4) + 2 * 6rem);
+}
+
+/*# sourceMappingURL=style.css.map */
