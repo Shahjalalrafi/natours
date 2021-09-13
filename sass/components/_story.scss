@@ -1,0 +1,33 @@
+.story {
+    max-width: 75%;
+    margin: 0 auto;
+    box-shadow: 1rem 2.2rem 4rem rgba($color-dark, .2);
+    background-color: $color-white;
+    padding: 6rem;
+    font-size: $default-font-size;
+
+    transform: skew(-12deg);
+    // @include clearfix;
+    
+    // & > * {
+    //     transform: skew(12deg);
+
+    // }
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        background-color: rebeccapurple;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skew(12deg);
+    }
+
+    &__text {
+        transform: skew(12deg);
+    }
+}

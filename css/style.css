@@ -333,6 +333,30 @@ body {
   color: #5643fa;
 }
 
+.story {
+  max-width: 75%;
+  margin: 0 auto;
+  box-shadow: 1rem 2.2rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 6rem;
+  font-size: 1.6rem;
+  transform: skew(-12deg);
+}
+.story__shape {
+  width: 15rem;
+  height: 15rem;
+  background-color: rebeccapurple;
+  float: left;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) skew(12deg);
+}
+.story__text {
+  transform: skew(12deg);
+}
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url("../img/hero.jpg");
   height: 95vh;
@@ -404,7 +428,14 @@ body {
 }
 
 .section-tours {
+  background-color: #f7f7f7;
   padding: 20rem 2rem;
+  margin-top: -11rem;
+}
+
+.section-stories {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
