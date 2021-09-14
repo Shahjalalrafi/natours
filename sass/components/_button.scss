@@ -47,3 +47,18 @@
         animation: MoveUpButton .4s ease-in;
     }
 }
+
+.btn-text:link,
+.btn-text:visited {
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+    &:hover {
+        padding-bottom: 3px;
+        box-shadow: 0rem .5rem 1rem rgba($color-dark, .1);
+        background-color: $primary-color;
+        color: $color-white;
+        border-bottom: 2px solid $primary-color-dark ;
+    }
+}
