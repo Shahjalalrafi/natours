@@ -13,6 +13,8 @@
         color: $color-grey-dark-2;
         border: none;
         outline: none;
+        transition: all .3s;
+        border-bottom: 3px solid transparent;
         
         &:focus {
             border-bottom: 3px solid $primary-color;
@@ -35,5 +37,51 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
+    }
+
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        padding-left: 4rem;
+        position: relative;
+    }
+
+
+    &__radio-button {
+        display: inline-block;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        border: 5px solid $primary-color;
+        position: absolute;
+        top: -4px;
+        left: 0;
+
+        &::after {
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            background-color: $primary-color;
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
     }
 }
