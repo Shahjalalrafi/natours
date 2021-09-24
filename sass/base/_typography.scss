@@ -1,5 +1,3 @@
-
-
 body {
     line-height: 1.6;
     font-weight: 400;
@@ -30,7 +28,7 @@ body {
         animation: MoveInLeft .4s ease-in;
 
         @include respond(phone) {
-            font-size: 5rem;
+            font-size: 4rem;
             letter-spacing: 1.4rem;
         }
     }
@@ -44,6 +42,7 @@ body {
         animation: MoveInRight .4s ease-in;
 
         @include respond(phone) {
+            font-size: 2rem;
             letter-spacing: .5rem;
         }
     }

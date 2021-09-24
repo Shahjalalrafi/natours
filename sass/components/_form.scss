@@ -25,13 +25,18 @@
 
         @include respond(tab-port) {
             width: 100%;
+            padding: 3rem;
         }
     }
 }
 
 .form {
+
     &__group {
         padding: 1rem;
+        @include respond(tab-port) {
+            padding: 0   
+        }
     }
 
     &__input {
@@ -47,9 +52,6 @@
         transition: all .3s;
         border-bottom: 3px solid transparent;
 
-        @include respond(tab-port) {
-            width: 100% !important;
-        }
         
         &:focus {
             border-bottom: 3px solid $primary-color;

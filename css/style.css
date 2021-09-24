@@ -90,7 +90,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .heading-text--main {
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 1.4rem;
   }
 }
@@ -104,6 +104,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .heading-text--sub {
+    font-size: 2rem;
     letter-spacing: 0.5rem;
   }
 }
@@ -159,9 +160,19 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
 }
+@media (max-width: 37.5em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 3rem;
+  }
+}
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+}
+@media (max-width: 37.5em) {
+  .u-margin-bottom-big {
+    margin-bottom: 6rem;
+  }
 }
 
 .btn, .btn:link, .btn:visited {
@@ -465,6 +476,7 @@ body {
   }
   .card__btn {
     padding: 2rem 4rem !important;
+    margin-bottom: 3rem;
   }
   .card__btn-1 {
     color: #ff7730;
@@ -598,11 +610,17 @@ body {
 @media (max-width: 56.25em) {
   .book__form {
     width: 100%;
+    padding: 3rem;
   }
 }
 
 .form__group {
   padding: 1rem;
+}
+@media (max-width: 56.25em) {
+  .form__group {
+    padding: 0;
+  }
 }
 .form__input {
   display: block;
@@ -616,11 +634,6 @@ body {
   outline: none;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
-}
-@media (max-width: 56.25em) {
-  .form__input {
-    width: 100% !important;
-  }
 }
 .form__input:focus {
   border-bottom: 3px solid #55c57a;
@@ -758,6 +771,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .header {
+    height: 70rem;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 }
