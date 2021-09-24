@@ -5,6 +5,10 @@ body {
     font-weight: 400;
     padding: 30px;
     font-family: "Lato", sans-serif;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
 
 .heading-text {
@@ -24,6 +28,11 @@ body {
         font-weight: 400;
     
         animation: MoveInLeft .4s ease-in;
+
+        @include respond(phone) {
+            font-size: 5rem;
+            letter-spacing: 1.4rem;
+        }
     }
     &--sub {
         font-size: 2.2rem;
@@ -33,6 +42,10 @@ body {
         margin-bottom: 32px;
     
         animation: MoveInRight .4s ease-in;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -45,6 +58,16 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+        padding: 2rem;
+    }
+   
+    @include respond(phone) {
+        font-size: 2.5rem;
+        padding: 0 2rem;
+    }
 
     &:hover {
         transform: skewY(2deg) skewX(15deg);
