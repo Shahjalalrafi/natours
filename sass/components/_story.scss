@@ -8,6 +8,16 @@
 
     transform: skew(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 6rem;
+    }
+
+    @include respond(phone) {
+        transform: skew(0);
+        padding: 3rem;
+    }
+
     &__shape {
         position: relative;
         width: 15rem;
@@ -21,15 +31,28 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(12deg);
         // backface-visibility: hidden;
+
+        @include respond(tab-port) {
+            float: none;
+        }
+        @include respond(phone) {
+            float: none;
+            transform: translateX(-3rem) skew(0);
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
     }
 
     &__text {
         transform: skew(12deg);
+        @include respond(phone) {
+            transform:  skew(0);
+        }
     }
 
     &__image {
         height: 100%;
-        // transform: scale(1.4);
+        transform: scale(1.4);
         transition: all .4s;
     }
 

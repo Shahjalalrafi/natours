@@ -8,7 +8,7 @@
     &__side {
        position: absolute;
        width: 100%;
-       height: 52rem;
+       height: 54rem;
        top: 0;
        left: 0;
        transition: all .6s;
@@ -143,6 +143,64 @@
         }
         &-3 {
             color: $tertiary-color-dark;
+        }
+    }
+
+
+
+    @include respond(tab-port) {
+        position: relative;
+        perspective: 150rem;
+
+        height: auto;
+        transition: all 8s;
+        box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
+
+        &__side {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        
+            &--front {
+                background-color: $color-white;
+            }
+            &--back {
+                transform: rotateY(0);
+                
+            }
+        }
+
+        &__details {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            padding: 1.6rem 0;
+            text-align: center;
+        }
+
+        &__price-box {
+            margin-bottom: 1rem;
+        }
+
+        &__btn {
+            padding: 2rem 4rem !important;
+            &-1 {
+                color: $secondary-color-dark;
+            }
+            &-2 {
+                color: $primary-color;
+            }
+            &-3 {
+                color: $tertiary-color-dark;
+            }
         }
     }
 }

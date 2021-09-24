@@ -315,7 +315,7 @@ body {
 .card__side {
   position: absolute;
   width: 100%;
-  height: 52rem;
+  height: 54rem;
   top: 0;
   left: 0;
   transition: all 0.6s;
@@ -427,6 +427,55 @@ body {
 .card__btn-3 {
   color: #5643fa;
 }
+@media (max-width: 56.25em) {
+  .card {
+    position: relative;
+    perspective: 150rem;
+    height: auto;
+    transition: all 8s;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  .card__side--front {
+    background-color: #fff;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+  }
+  .card__details {
+    padding: 2rem;
+    text-align: center;
+  }
+  .card__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    padding: 1.6rem 0;
+    text-align: center;
+  }
+  .card__price-box {
+    margin-bottom: 1rem;
+  }
+  .card__btn {
+    padding: 2rem 4rem !important;
+  }
+  .card__btn-1 {
+    color: #ff7730;
+  }
+  .card__btn-2 {
+    color: #55c57a;
+  }
+  .card__btn-3 {
+    color: #5643fa;
+  }
+}
 
 .story {
   max-width: 75%;
@@ -436,6 +485,18 @@ body {
   padding: 8rem;
   font-size: 1.6rem;
   transform: skew(-12deg);
+}
+@media (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 6rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .story {
+    transform: skew(0);
+    padding: 3rem;
+  }
 }
 .story__shape {
   position: relative;
@@ -449,11 +510,30 @@ body {
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skew(12deg);
 }
+@media (max-width: 56.25em) {
+  .story__shape {
+    float: none;
+  }
+}
+@media (max-width: 37.5em) {
+  .story__shape {
+    float: none;
+    transform: translateX(-3rem) skew(0);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
 .story__text {
   transform: skew(12deg);
 }
+@media (max-width: 37.5em) {
+  .story__text {
+    transform: skew(0);
+  }
+}
 .story__image {
   height: 100%;
+  transform: scale(1.4);
   transition: all 0.4s;
 }
 .story__caption {
@@ -496,6 +576,31 @@ body {
   object-fit: cover;
 }
 
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/nat-10.jpg");
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 75em) {
+  .book {
+    background-image: linear-gradient(to 105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 70%), url("../img/nat-10.jpg") !important;
+  }
+}
+@media (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../img/nat-10.jpg");
+  }
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
+}
+@media (max-width: 56.25em) {
+  .book__form {
+    width: 100%;
+  }
+}
+
 .form__group {
   padding: 1rem;
 }
@@ -511,6 +616,11 @@ body {
   outline: none;
   transition: all 0.3s;
   border-bottom: 3px solid transparent;
+}
+@media (max-width: 56.25em) {
+  .form__input {
+    width: 100% !important;
+  }
 }
 .form__input:focus {
   border-bottom: 3px solid #55c57a;
@@ -533,6 +643,12 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block;
+}
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .form__radio-input {
   display: none;
@@ -661,6 +777,11 @@ body {
 @media (max-width: 56.25em) {
   .row {
     max-width: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  .row {
+    max-width: 80%;
   }
 }
 .row:not(:last-child) {
@@ -953,17 +1074,6 @@ body {
   .section-book {
     padding: 10rem 0;
   }
-}
-
-.book {
-  height: 57rem;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/nat-10.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.book__form {
-  width: 50%;
-  padding: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

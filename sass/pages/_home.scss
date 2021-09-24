@@ -57,17 +57,3 @@
     }
 }
 
-.book {
-    height: 57rem;
-    background-image: linear-gradient(105deg, 
-    rgba($color-white, .8) 0%, 
-    rgba($color-white, .8) 50%, 
-    transparent 50%), url('../img/nat-10.jpg');
-    background-position: center;
-    background-size: cover;
-
-    &__form {
-        width: 50%;
-        padding: 6rem;
-    }
-}
