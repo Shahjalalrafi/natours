@@ -60,6 +60,11 @@ body {
   color: #777;
 }
 
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
 body {
   line-height: 1.6;
   font-weight: 400;
@@ -438,7 +443,7 @@ body {
 .card__btn-3 {
   color: #5643fa;
 }
-@media (max-width: 56.25em) {
+@media screen and (min-width: 480px) {
   .card {
     position: relative;
     perspective: 150rem;
@@ -726,8 +731,14 @@ body {
   width: 33.33%;
   display: table-cell;
 }
+@media (max-width: 56.25em) {
+  .popup__left {
+    display: none;
+  }
+}
 .popup__img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 .popup__right {

@@ -148,7 +148,7 @@
 
 
 
-    @include respond(tab-port) {
+    @media screen and (min-width: 480px) {
         position: relative;
         perspective: 150rem;
 
