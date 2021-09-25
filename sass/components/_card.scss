@@ -148,7 +148,8 @@
 
 
 
-    @media screen and (min-width: 480px) {
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none)  {
         position: relative;
         perspective: 150rem;
 
@@ -170,6 +171,13 @@
                 transform: rotateY(0);
                 
             }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }
+        &:hover &__side--back {
+            transform: rotateY(0);
         }
 
         &__details {

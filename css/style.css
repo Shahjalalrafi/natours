@@ -443,7 +443,7 @@ body {
 .card__btn-3 {
   color: #5643fa;
 }
-@media screen and (min-width: 480px) {
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {
     position: relative;
     perspective: 150rem;
@@ -462,6 +462,12 @@ body {
     background-color: #fff;
   }
   .card__side--back {
+    transform: rotateY(0);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0deg);
+  }
+  .card:hover .card__side--back {
     transform: rotateY(0);
   }
   .card__details {
